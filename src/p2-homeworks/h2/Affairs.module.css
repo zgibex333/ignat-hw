@@ -1,0 +1,28 @@
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.affairsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.singleAffair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.singleAffair span {
+    text-transform: capitalize;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}

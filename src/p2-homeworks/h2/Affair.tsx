@@ -1,6 +1,7 @@
 import React from 'react'
 import {AffairType} from "./HW2";
-import s from "./Affairs.module.css"
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import styled from "styled-components";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,11 +15,18 @@ function Affair(props: AffairPropsType) {
     }// need to fix
 
     return (
-        <div className={s.singleAffair}>
+        <AffairContainer>
             <span>{props.affair.name}</span>
-            <button onClick={deleteCallback}>X</button>
-        </div>
+            <SuperButton red onClick={deleteCallback}>X</SuperButton>
+        </AffairContainer>
     )
 }
 
 export default Affair
+
+const AffairContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+`

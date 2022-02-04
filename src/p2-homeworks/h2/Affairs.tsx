@@ -1,7 +1,8 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairPriorityType, AffairType, FilterType} from './HW2'
-import s from "./Affairs.module.css"
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import styled from "styled-components";
 
 type AffairsPropsType = { // need to fix any
     data: AffairPriorityType
@@ -32,21 +33,30 @@ function Affairs(props: AffairsPropsType) {
     }
 
     return (
-        <div className={s.taskContainer}>
-
-            <div className={s.affairsContainer}>
+        <Wrapper>
+            <div>
                 {mappedAffairs}
             </div>
+            <Buttons>
+                <SuperButton onClick={setAll}>All</SuperButton>
+                <SuperButton onClick={setHigh}>High</SuperButton>
+                <SuperButton onClick={setMiddle}>Middle</SuperButton>
+                <SuperButton onClick={setLow}>Low</SuperButton>
+            </Buttons>
 
-            <div className={s.btnContainer}>
-                <button onClick={setAll}>All</button>
-                <button onClick={setHigh}>High</button>
-                <button onClick={setMiddle}>Middle</button>
-                <button onClick={setLow}>Low</button>
-            </div>
-
-        </div>
+        </Wrapper>
     )
 }
 
 export default Affairs
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  width: 45%;
+`
+
+const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

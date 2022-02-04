@@ -8,7 +8,7 @@ function Header() {
     const [visible, setVisible] = useState(false);
 
     return (
-        <div  onMouseEnter={() => setVisible(true)}
+        <div className={s.headerContainer}  onMouseEnter={() => setVisible(true)}
               onMouseLeave={() => setVisible(false)}>
             <ul className={`${s.headerList} ${visible ? s.active: ''}`}>
                 <li><NavLink to={PATH.PRE_JUNIOR}>Pre-Junior</NavLink></li>

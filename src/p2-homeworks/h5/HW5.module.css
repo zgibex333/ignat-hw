@@ -1,0 +1,45 @@
+.headerList {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    width: fit-content;
+    flex-direction: row;
+    transition: all 1s ease;
+    left: -30%;
+}
+
+.headerList a {
+    text-decoration: none;
+    color: #4f4545;
+}
+
+.headerList a:hover {
+    color: #b053be;
+}
+
+.headerList:after {
+    display: inline-block;
+    position: absolute;
+    left: 120%;
+    top: -40%;
+    padding: 0.5rem;
+    content: 'MENU';
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.active {
+    left: 0;
+}
+
+.square {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: aqua;
+    position: static;
+    cursor: pointer;
+}
+
